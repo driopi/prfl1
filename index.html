@@ -835,6 +835,7 @@
                             prevEl: '.swiper-button-prev',
                         },
                         mousewheel: {
+                            enabled: false,
                             invert: false,
                         },
                         slidesPerView: 1,
@@ -853,6 +854,16 @@
                                 spaceBetween: 40,
                             },
                         },
+                    });
+
+                    // Включать mousewheel только при наведении на слайд
+                    document.querySelectorAll('.swiper-slide').forEach(slide => {
+                        slide.addEventListener('mouseenter', () => {
+                            this.swiper.mousewheel.enable();
+                        });
+                        slide.addEventListener('mouseleave', () => {
+                            this.swiper.mousewheel.disable();
+                        });
                     });
                 }
             }
