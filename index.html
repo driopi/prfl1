@@ -339,7 +339,6 @@
             transition: var(--transition);
             cursor: pointer;
             position: relative;
-            overflow: hidden;
             min-height: 520px;
             display: flex;
             flex-direction: column;
@@ -368,7 +367,6 @@
         }
 
         .preview-item:hover {
-            box-shadow: 0 12px 35px rgba(197, 153, 86, 0.4);
             border-color: var(--accent);
         }
 
@@ -834,7 +832,7 @@
                         loop: true,
                         navigation: {
                             nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
                         },
                         mousewheel: {
                             invert: false,
